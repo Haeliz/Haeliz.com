@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>HAELIZ</title>
+		<meta name="description" content="Grid Layout with Motion Hover Effect and Content Preview" />
+		<meta name="keywords" content="grid, css, layout, template, hover, content, gsap, tweenmax, overlay" />
+		<meta name="author" content="Codrops" />
+		<link rel="shortcut icon" href="favicon.ico">
+		<link rel="stylesheet" type="text/css" href="css/base.css" />
+		<script>document.documentElement.className="js";var supportsCssVars=function(){var e,t=document.createElement("style");return t.innerHTML="root: { --tmp-var: bold; }",document.head.appendChild(t),e=!!(window.CSS&&window.CSS.supports&&window.CSS.supports("font-weight","var(--tmp-var)")),t.parentNode.removeChild(t),e};supportsCssVars()||alert("Please view this demo in a modern browser that supports CSS Variables.");</script>
+	</head>
+	<body class="loading">
+		<svg class="hidden">
+			<symbol id="icon-arrow" viewBox="0 0 24 24">
+				<title>arrow</title>
+				<polygon points="6.3,12.8 20.9,12.8 20.9,11.2 6.3,11.2 10.2,7.2 9,6 3.1,12 9,18 10.2,16.8 "/>
+			</symbol>
+			<symbol id="icon-drop" viewBox="0 0 24 24">
+				<title>drop</title>
+				<path d="M12,21c-3.6,0-6.6-3-6.6-6.6C5.4,11,10.8,4,11.4,3.2C11.6,3.1,11.8,3,12,3s0.4,0.1,0.6,0.3c0.6,0.8,6.1,7.8,6.1,11.2C18.6,18.1,15.6,21,12,21zM12,4.8c-1.8,2.4-5.2,7.4-5.2,9.6c0,2.9,2.3,5.2,5.2,5.2s5.2-2.3,5.2-5.2C17.2,12.2,13.8,7.3,12,4.8z"/><path d="M12,18.2c-0.4,0-0.7-0.3-0.7-0.7s0.3-0.7,0.7-0.7c1.3,0,2.4-1.1,2.4-2.4c0-0.4,0.3-0.7,0.7-0.7c0.4,0,0.7,0.3,0.7,0.7C15.8,16.5,14.1,18.2,12,18.2z"/>
+			</symbol>
+			<symbol id="icon-cross" viewBox="0 0 24 23">
+				<title>cross</title>
+				<path d="M23.865 3.677c.197-.383.164-.818-.008-1.18.048-.41-.06-.827-.448-1.147L22.323.457c-.636-.524-1.632-.689-2.25 0a155.348 155.348 0 0 1-8.797 9.001C9.011 7.342 6.72 5.255 4.443 3.165c-.8-.734-1.956-.503-2.458.37C1.253 3.9.659 4.374.168 5.182c-.233.386-.215.872 0 1.258 1.47 2.635 4.31 4.951 6.646 7.083-.313.28-.623.562-.942.836-3.146 2.702-5.268 4.416-1.331 7.187.053.037.107.029.161.05.076.036.148.06.232.074.026 0 .05.005.075.003.082.007.16.027.243.011 2.117-.415 4.085-2.074 5.872-3.9 1.74 1.715 3.592 3.353 5.63 4.325.485.232 1.063.097 1.436-.227.626.047 1.197-.342 1.484-.901.042-.026.07-.041.116-.07.91-.569.993-1.701.32-2.482-1.522-1.762-3.138-3.438-4.787-5.084 2.968-2.9 6.674-6.027 8.542-9.667z"/>
+			</symbol>
+		</svg>
+		<main>
+
+			<div class="content">
+				<div class="grid">
+					<a class="grid__item" href="#preview-1">
+						<div class="box">
+							<div class="box__shadow"></div>
+							<img class="box__img" src="img/bichro1.jpg" alt="Some glitch"/>
+							<h4 class="box__text"><span class="box__text-inner">HAELIZ</span></h4>
+							<div class="box__deco"><img src="img/lilghost.png" alt="mon fantome"></div>
+							<p class="box__content">"Je voudrais qu'on me considère en tant que tel."<strong>Qui suis-je ?</strong></p>
+						</div>
+					</a>
+
+
+					<a class="grid__item" href="#preview-2">
+						<div class="box">
+							<div class="box__shadow"></div>
+							<img class="box__img" src="img/rachael.jpg" alt="Some image"/>
+							<h4 class="box__text box__text--bottom"><span class="box__text-inner box__text-inner--rotated1">favourite work</span></h4>
+							<div class="box__deco box__deco--top"><img src="img/n1_1.png" alt="mon numero 1"></div>
+						</div>
+					</a>
+
+
+					<a class="grid__item" href="#preview-3">
+						<div class="box">
+							<div class="box__shadow"></div>
+							<img class="box__img" src="img/affichenaio.jpg" alt="Naio"/>
+							<h3 class="box__title"><span class="box__title-inner" data-hover="ME">ME</span></h3>
+							<h4 class="box__text box__text--topcloser"><span class="box__text-inner">latest work</span></h4>
+							<div class="box__deco"><img src="img/lanterne.png" alt="ma lanterne"></div>
+						</div>
+					</a>
+
+					<a class="grid__item grid__item--noclick" href="https://www.instagram.com/impostorz.records/?hl=fr">
+						<div class="box">
+							<div class="box__shadow"></div>
+							<img class="box__img" src="img/unlimited.gif" alt="Some image"/>
+							<h4 class="box__text"><span class="box__text-inner box__text-inner--rotated2 box__text-inner--reverse">Instagram</span></h4>
+							<p><strong>@impostorzrecords</strong> mon compte instagram <strong> (un peu) spécial</strong></p>
+						</div>
+					</a>
+
+					<a class="grid__item" href="#preview-4">
+						<div class="box">
+							<div class="box__shadow"></div>
+							<img class="box__img" src="img/katanakissproject.jpg" alt="katanakiss logo"/>
+							<h4 class="box__text box__text--bottom box__text--right"><span class="box__text-inner box__text-inner--rotated3">katanakiss</span></h4>
+									<div class="box__deco"><img src="img/faux.png" alt="coupe coupe"></div>
+						</div>
+					</a>
+
+					<a class="grid__item" href="#preview-5">
+						<div class="box">
+							<div class="box__shadow"></div>
+							<img class="box__img" src="img/logomanufa4.jpg" alt="logo manufacture"/>
+								<h3 class="box__title"><span class="box__title-inner" data-hover="logos">     logos</span></h3>
+							<h4 class="box__text box__text--bottomcloser"><span class="box__text-inner">manufacture</span></h4>
+						</div>
+					</a>
+
+
+					<a class="grid__item" href="#preview-6">
+						<div class="box">
+							<div class="box__shadow"></div>
+							<img class="box__img" src="img/ekossieprez.jpg" alt="logo ekossie entier"/>
+							<h4 class="box__text"><span class="box__text-inner">ekossie</span></h4>
+						</div>
+					</a>
+
+
+					<a class="grid__item" href="#preview-7">
+						<div class="box">
+							<div class="box__shadow"></div>
+							<img class="box__img" src="img/logochise.jpg" alt="Some image"/>
+							<h4 class="box__text box__title--bottom"><span class="box__text-inner box__text-inner--rotated1">Cheeeeese</span></h4>
+						</div>
+					</a>
+
+
+					<a class="grid__item" href="#preview-8">
+						<div class="box">
+							<div class="box__shadow"></div>
+							<img class="box__img" src="img/pieuvre.jpg" alt="Some image"/>
+							<h3 class="box__title"><span class="box__title-inner" data-hover="illustrations">illustrations</span></h3>
+							<h4 class="box__text box__text--bottom"><span class="box__text-inner">octo man</span></h4>
+							<div class="box__deco"></div>
+						</div>
+					</a>
+
+
+					<a class="grid__item" href="#preview-9">
+						<div class="box">
+							<div class="box__shadow"></div>
+							<img class="box__img" src="img/wonder-flamby.jpg" alt="wonderflamby"/>
+							<h4 class="box__text box__text--bottom"><span class="box__text-inner">wonder flanby</span></h4>
+						</div>
+					</a>
+
+
+					<a class="grid__item" href="#preview-10">
+						<div class="box">
+							<div class="box__shadow"></div>
+							<img class="box__img" src="img/mefd.jpg" alt="me and friends"/>
+							<h4 class="box__text"><span class="box__text-inner box__text-inner--rotated2">ghosts</span></h4>
+						</div>
+					</a>
+
+					<a class="grid__item" href="#preview-11">
+						<div class="box">
+							<div class="box__shadow"></div>
+							<img class="box__img" src="img/flatface.jpg" alt="flatdesign"/>
+							<h4 class="box__text box__text--bottom box__text--right"><span class="box__text-inner box__text-inner--rotated3">flatdesign</span></h4>
+							<div class="box__deco box__deco--top"><img src="img/sac.png" alt="sac qui brule"></div>
+						</div>
+
+											<a class="grid__item" href="#preview-12">
+												<div class="box">
+													<div class="box__shadow"></div>
+													<img class="box__img" src="img/fondtest2.jpg" alt="retro devices"/>
+													<h4 class="box__text box__text--bottom box__text--right"><span class="box__text-inner box__text-inner--rotated3">Geek Zone</span></h4>
+													<div class="box__deco box__deco--top"><img src="img/chat.png" alt="geek zone"></div>
+												</div>
+											</a>
+
+
+											<a class="grid__item" href="#preview-13">
+												<div class="box">
+													<div class="box__shadow"></div>
+													<img class="box__img" src="img/devantmarrées.jpg" alt="carte des marrées frontpic"/>
+													<h4 class="box__text box__text--bottomcloser"><span class="box__text-inner">marées</span></h4>
+														<h3 class="box__title"><span class="box__title-inner" data-hover="édition">édition</span></h3>
+												</div>
+											</a>
+
+
+																<a class="grid__item" href="#preview-14">
+																	<div class="box">
+																		<div class="box__shadow"></div>
+																		<img class="box__img" src="img/devantétoiles.jpg" alt="carte des étoiles frontpic"/>
+																		<h4 class="box__text"><span class="box__text-inner">étoiles</span></h4>
+																	</div>
+																</a>
+
+																<a class="grid__item" href="#preview-15">
+																	<div class="box">
+																		<div class="box__shadow"></div>
+																		<img class="box__img" src="img/devantrs.jpg" alt="couv rs devant"/>
+																		<h4 class="box__text box__title--bottom"><span class="box__text-inner box__text-inner--rotated1">rolling stone</span></h4>
+																	</div>
+																</a>
+
+																<a class="grid__item" href="#preview-16">
+																	<div class="box">
+																		<div class="box__shadow"></div>
+																		<img class="box__img" src="img/fyrefest.jpg" alt="fyre festival"/>
+																		<h4 class="box__text box__text--bottom"><span class="box__text-inner">summer fest</span></h4>
+																		<div class="box__deco"></div>
+																	</div>
+																</a>
+																<a class="grid__item" href="#preview-17">
+																	<div class="box">
+																		<div class="box__shadow"></div>
+																		<img class="box__img" src="img/ycefest.jpg" alt="yce festival"/>
+																		<h4 class="box__text box__text--bottom"><span class="box__text-inner">winter fest</span></h4>
+																	</div>
+																</a>
+
+																<a class="grid__item" href="#preview-18">
+																	<div class="box">
+																		<div class="box__shadow"></div>
+																		<img class="box__img" src="img/maze devant.jpg" alt="panpan"/>
+																		<h4 class="box__text"><span class="box__text-inner box__text-inner--rotated2">mazes</span></h4>
+																			<h3 class="box__title"><span class="box__title-inner" data-hover="typographie">typographie</span></h3>
+																	</div>
+																</a>
+
+																<a class="grid__item" href="#preview-19">
+																	<div class="box">
+																		<div class="box__shadow"></div>
+																		<img class="box__img" src="img/posterfini.jpg" alt="en cours"/>
+																		<h4 class="box__text box__text--bottom box__text--right"><span class="box__text-inner box__text-inner--rotated3">kabbalista</span></h4>
+																	</div>
+
+
+
+						</div>
+					</a>
+
+
+			<div class="overlay">
+				<div class="overlay__reveal"></div>
+				<div class="overlay__item" id="preview-1">
+					<div class="box">
+						<div class="box__shadow"></div>
+						<img class="box__img box__img--original" src="img/bichro1.jpg" alt="moi"/>
+						<h4 class="box__text"><span class="box__text-inner">Lisa Ithurritze</span></h4>
+						<h4 class="box__text box__text--bottom"><span class="box__text-inner box__text-inner--rotated1">lisa.ithurritze@gmail.com</span></h4>
+					</div>
+					<p class="overlay__content"> je m'appelle <strong>Lisa</strong> et je suis étudiante en Master 1 <strong>Design Interactif</strong> à l'ECV Bordeaux. Je suis passionnée de <strong>culture pop</strong> et <strong>old school</strong>, particulièrement musicale et digitale. Voici un petit aperçu de mes travaux <strong>scolaires</strong> et <strong>personnels</strong>... très bonne visite !
+						*Sachez que ce site est encore en construction et a été codé par mes soins.*
+				</div>
+
+
+				<div class="overlay__item" id="preview-2">
+					<div class="box">
+						<div class="box__shadow"></div>
+						<img class="box__img box__img--original" src="img/rachael.jpg" alt="rachael"/>
+						<h4 class="box__text box__text--bottom"><span class="box__text-inner box__text-inner--rotated1">Rachael</span></h4>
+					</div>
+					<p class="overlay__content">Illustration au feutre fin et aquarelle, petite référence à la <strong>culture pop des années 80</strong>...en regardant bien <strong>ses yeux</strong> vous reconnaîtrez peut être de qui il s'agit !</p>
+				</div>
+
+
+				<div class="overlay__item" id="preview-3">
+					<div class="box">
+						<div class="box__shadow"></div>
+						<img class="box__img box__img--original" src="img/naiovinyl.jpg" alt="naio"/>
+						<h4 class="box__text box__text--topcloser"><span class="box__text-inner">album</span></h4>
+					</div>
+					<p class="overlay__content">
+
+						NÄIØ est une artiste <strong>islandaise</strong> de 25 ans, mystérieuse et <strong>charismatique</strong>, influencée par les folklores et musiques nordiques...
+					Bon d'accord en vérité il s'agit de ma grande soeur.</p>
+				</div>
+
+
+				<div class="overlay__item" id="preview-4">
+					<div class="box">
+						<div class="box__shadow"></div>
+						<img class="box__img box__img--original" src="img/katanakiss.jpg" alt="katanakiss"/>
+						<h4 class="box__text box__text--bottom box__text--right"><span class="box__text-inner box__text-inner--rotated3">katanakiss</span></h4>
+					</div>
+					<p class="overlay__content">Création d'un logo et ses déclinaisons pour une association de <strong>self defense féminin</strong>.</p>
+				</div>
+
+
+				<div class="overlay__item" id="preview-5">
+					<div class="box">
+						<div class="box__shadow"></div>
+						<img class="box__img box__img--original" src="img/afficheexpomanufacture.jpg" alt="manuf"/>
+						<h4 class="box__text box__text--bottomcloser"><span class="box__text-inner">manufacture</span></h4>
+					</div>
+					<p class="overlay__content">Logo et affiche pour un <strong>centre culturel</strong> fictif élitiste basé sur les oeuvres et travaux <strong>architecturaux expérimentaux</strong>. (ça fait beaucoup de "aux..")</p>
+				</div>
+
+
+				<div class="overlay__item" id="preview-6">
+					<div class="box">
+						<div class="box__shadow"></div>
+						<img class="box__img box__img--original" src="img/article_presse_Ekossie.jpg" alt="article Ekossie"/>
+						<h4 class="box__text"><span class="box__text-inner">mascotte</span></h4>
+					</div>
+					<p class="overlay__content">Création d'une mascotte pour <strong>Ekosea</strong>, plateforme de crowdfunding concentrée sur la protection des océans. Ekossie est un petit monstre dissident inspiré de la <strong>créature du lac Noir</strong>.</p>
+				</div>
+
+
+				<div class="overlay__item" id="preview-7">
+					<div class="box">
+						<div class="box__shadow"></div>
+						<img class="box__img box__img--original" src="img/p-carre-cheese.jpg" alt="planche cheese"/>
+							<h4 class="box__text box__text--bottom"><span class="box__text-inner">cheeeeese</span></h4>
+					</div>
+					<p class="overlay__content">Ellaboration d'un logo et ses variations pour <strong>l'agence Cheeeeese</strong> lors d'un concours interne à l'ECV. Le but était ici de créer un logo <strong>festif</strong> pour les <strong>20 ans</strong> de l'agence. Pour se faire je me suis lourdement inspirée des motifs <strong>kitsch</strong> des années 90.</p>
+				</div>
+
+
+				<div class="overlay__item" id="preview-8">
+					<div class="box">
+						<div class="box__shadow"></div>
+						<img class="box__img box__img--original" src="img/pieuvre.jpg" alt="amoureux de la mer"/>
+						<h4 class="box__text box__text--bottom"><span class="box__text-inner">l'amoureux de la mer</span></h4>
+					</div>
+					<p class="overlay__content">Dyptique autour de l'<strong>illusion de texture</strong> : tentacule réalisée en aquarelle et personnage au feutre noir. Tout est réalisé <strong>à la main</strong>, pas de collage (comme on a souvent pu me le demander) !</p>
+				</div>
+
+
+				<div class="overlay__item" id="preview-9">
+					<div class="box">
+						<div class="box__shadow"></div>
+						<img class="box__img box__img--original" src="img/wonder-flamby.jpg" alt="wonder flamby"/>
+						<h4 class="box__text box__text--bottom"><span class="box__text-inner">Wonder flanby</span></h4>
+					</div>
+					<p class="overlay__content">Seconde partie de l'exercice de <strong>texture</strong> : flanby et caramel réalisés en aquarelle, le reste au feutre noir. On désacralise un peu cette grande icône des comics avec un peu de <strong>caramel</strong> sur la tête...</p>
+				</div>
+
+
+				<div class="overlay__item" id="preview-10">
+					<div class="box">
+						<div class="box__shadow"></div>
+						<img class="box__img box__img--original" src="img/mefd.jpg" alt="me and friends"/>
+						<h4 class="box__text"><span class="box__text-inner box__text-inner--rotated2">yōkai friends</span></h4>
+					</div>
+					<p class="overlay__content">Petit délire personnel autour du mythe des <strong>Yōkai</strong>, fantomes et démons du folklore <strong>japonais</strong>. J'ai ici repris des Yōkais déjà existants et <strong>inventé quelques un</strong>...Comme le <strong>garçon citrouille</strong> qui viendrait hanter vos potagers la nuit tombée, ou <strong>l'enfant crapaud</strong> profanateur des tombeaux de vos ancêtres pour se vêtir de leurs os.</p>
+				</div>
+
+
+				<div class="overlay__item" id="preview-11">
+					<div class="box">
+						<div class="box__shadow"></div>
+						<img class="box__img box__img--original" src="img/flat80ies.jpg" alt="biginjapan"/>
+						<h4 class="box__text box__text--bottom box__text--right"><span class="box__text-inner box__text-inner--rotated3">biginjapan</span></h4>
+					</div>
+					<p class="overlay__content">Exercice technique sur l'illustration en <strong>flatdesign</strong>. Balade nocturne d'une héroïne sans visage à la recherche d'un <strong>temple sacré</strong> caché dans la forêt du mont <strong>Fuji</strong>...</p>
+				</div>
+
+				<div class="overlay__item" id="preview-12">
+					<div class="box">
+						<div class="box__shadow"></div>
+						<img class="box__img box__img--original" src="img/alien.jpg" alt="alien"/>
+						<h4 class="box__text box__text--bottom"><span class="box__text-inner box__text-inner--rotated1">Alien The Game</span></h4>
+					</div>
+					<p class="overlay__content">Projet graphique physique complet<strong>culture pop des années 80</strong>...en regardant bien <strong>ses yeux</strong> vous reconnaîtrez peut être de qui il s'agit !</p>
+				</div>
+
+								<div class="overlay__item" id="preview-13">
+									<div class="box">
+										<div class="box__shadow"></div>
+										<img class="box__img box__img--original" src="img/cartemarrée.jpg" alt="carte marrées"/>
+										<h4 class="box__text box__text--bottomcloser"><span class="box__text-inner">alertés par les marées</span></h4>
+									</div>
+									<p class="overlay__content">Dans le cadre d'un projet réalisé autour de <strong>l'origine de ma famille</strong>, j'ai documenté (à ma manière), ce qu'auraient pu être les <strong>cartes des marées</strong> et <strong>des étoiles</strong> qui auraient pu guider mes ancêtres marins d'<strong>Alexandrie</strong> à <strong>Bordeaux</strong>.</p>
+								</div>
+
+								<div class="overlay__item" id="preview-14">
+									<div class="box">
+										<div class="box__shadow"></div>
+										<img class="box__img box__img--original" src="img/carteétoiles.jpg" alt="carte étoiles"/>
+										<h4 class="box__text"><span class="box__text-inner">guidés par les étoiles</span></h4>
+									</div>
+									<p class="overlay__content">Dans le cadre d'un projet réalisé autour de <strong>l'origine de ma famille</strong>, j'ai documenté (à ma manière), ce qu'auraient pu être les <strong>cartes des marées</strong> et <strong>des étoiles</strong> qui auraient pu guider mes ancêtres marins d'<strong>Alexandrie</strong> à <strong>Bordeaux</strong>.</p>
+								</div>
+
+								<div class="overlay__item" id="preview-15">
+									<div class="box">
+										<div class="box__shadow"></div>
+										<img class="box__img box__img--original" src="img/couvrs.png" alt="couv rolling stone"/>
+										<h4 class="box__text box__text--bottom"><span class="box__text-inner">presque une star</span></h4>
+									</div>
+									<p class="overlay__content"><strong>Doppelgänger</strong> Rolling Stone : exercice d'édition dans lequel nous étions chargés de <strong>choisir un magazine</strong> et de <strong>copier sa mise en page</strong> exactement à l'identitique en créant un nouveau numéro inédit <strong>à notre image</strong>. J'ai donc créé un RS inédit sur Haeliz, étoile montante du <strong>rock</strong>.</p>
+								</div>
+
+								<div class="overlay__item" id="preview-16">
+									<div class="box">
+										<div class="box__shadow"></div>
+										<img class="box__img box__img--original" src="img/fyrefest.jpg" alt="fyre fest affiche"/>
+										<h4 class="box__text box__text--bottom"><span class="box__text-inner">FYRE festival</span></h4>
+									</div>
+									<p class="overlay__content">Création d'un <strong>alphabet modulaire</strong> et son application dans un dyptique d'affiches événementielles d'un <strong>festival</strong> fictif en <strong>Islande</strong> à la Reyjkavik Harpa, plus grand espace de concert de la capitale. L'alphabet en question concerne le titre.
+								</div>
+
+								<div class="overlay__item" id="preview-17">
+									<div class="box">
+										<div class="box__shadow"></div>
+										<img class="box__img box__img--original" src="img/ycefest.jpg" alt="yce fest affiche"/>
+										<h4 class="box__text"><span class="box__text-inner box__text-inner--rotated2">YCE festival</span></h4>
+									</div>
+									<p class="overlay__content">Création d'un <strong>alphabet modulaire</strong> et son application dans un dyptique d'affiches événementielles d'un <strong>festival</strong> fictif en <strong>Islande</strong>. L'alphabet en question concerne le titre. J'ai effectivement une passion pour cette culture et ce pays !...
+								</div>
+
+
+				<div class="overlay__item" id="preview-18">
+					<div class="box">
+						<div class="box__shadow"></div>
+						<img class="box__img box__img--original" src="img/toutescouvs.jpg" alt="toutes couvs"/>
+						<h4 class="box__text"><span class="box__text-inner box__text-inner--rotated2">Couvertures de livres</span></h4>
+					</div>
+					<p class="overlay__content">Refonte <strong>personnelle</strong> des couvertures de certains de mes livres préférés autour du <strong>labyrinthe</strong>...N'hésitez pas à <strong>zoomer</strong> pour les détails.</p>
+				</div>
+
+				<button class="overlay__close"><svg class="icon icon--cross"><use xlink:href="#icon-cross"></use></svg></button>
+			</div>
+		</main>
+		<script src="js/imagesloaded.pkgd.min.js"></script>
+		<script src="js/TweenMax.min.js"></script>
+		<script src="js/demo.js"></script>
+
+	</body>
+</html>
